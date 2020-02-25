@@ -15,6 +15,10 @@ public class Item {
 		return this.nome;
 	}
 	
+	public double getValor() {
+		return this.valor;
+	}
+	
 	
 
 }
