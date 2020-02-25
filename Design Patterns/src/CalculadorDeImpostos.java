@@ -12,7 +12,7 @@ public class CalculadorDeImpostos {
 
 	
 	public void calculaImposto() {
-		System.out.println(imposto.calculaImposto(orcamento.getValor()));
+		System.out.println(imposto.calculaImposto(orcamento.getTotal()));
 		
 	}
 }
