@@ -4,6 +4,7 @@ import java.util.List;
 public class Orcamento {
 	private double total;
 	private List<Item> lista = new ArrayList<Item>();
+	public static int quantidadeDeItens;
 	
 	
 	public Orcamento(double total) {
@@ -14,6 +15,7 @@ public class Orcamento {
 
 	public void adicionaItem(Item item) {
 		lista.add(item);
+		this.quantidadeDeItens++;
 	}
 
 

@@ -1,7 +1,13 @@
 
 public class Conta {
 	private double saldo;
-	private String nome;
+	private String nomeTitular;
+	private String nomeBanco;
+	private String telefoneBanco;
+	private String enderecoBanco;
+	private String emailBanco;
+	private String agencia;
+	private String numeroConta;
 
 	public double getSaldo() {
 		return saldo;
@@ -12,8 +18,31 @@ public class Conta {
 	}
 
 	public String getNomeTitular() {
-		// TODO Auto-generated method stub
-		return this.nome;
+		return this.nomeTitular;
+	}
+
+	public String getNomeBanco() {
+		return this.nomeBanco;
+	}
+
+	public String getTelefoneBanco() {
+		return this.telefoneBanco;
+	}
+
+	public String getEnderecoBanco() {
+		return this.enderecoBanco;
+	}
+
+	public String getEmailBanco() {
+		return this.emailBanco;
+	}
+
+	public String getAgencia() {
+		return this.agencia;
+	}
+
+	public String getNumeroConta() {
+		return this.numeroConta;
 	}
 	
 	
