@@ -2,15 +2,24 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class IHIT extends TemplateMethod {
+	
+	public IHIT() {
+	}
+	
+	public IHIT(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	
 
 	@Override
 	protected double maximoTaxamento(Orcamento orcamento) {
-		return (orcamento.getTotal() * 0.13) + 100.00;
+		return (orcamento.getTotal() * 0.13) + 100.00+ calculaOutroImposto(orcamento);
 	}
 
 	@Override
 	protected double minimoTaxamento(Orcamento orcamento) {
-		return orcamento.getTotal() * 0.01 * orcamento.quantidadeDeItens;
+		return orcamento.getTotal() * 0.01 * orcamento.quantidadeDeItens + calculaOutroImposto(orcamento);
 	}
 
 	@Override

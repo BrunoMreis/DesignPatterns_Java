@@ -1,6 +1,28 @@
 
-public interface Imposto {
+public abstract class Imposto {
 	
-	double calculaImposto(Orcamento orcamento);
+	final private Imposto outroImposto;
+	
+	public Imposto() {
+		outroImposto = null; 
+	}
+	
+	
+	public Imposto(Imposto outroImposto) {
+		this.outroImposto = outroImposto;
+	}
+	
+
+	public abstract double  calculaImposto(Orcamento orcamento); 
+	
+	
+	protected double calculaOutroImposto(Orcamento orcamento) {
+		
+		if(outroImposto == null) {
+			return 0;
+		}
+		return this.outroImposto.calculaImposto(orcamento);
+		
+	}
 
 }

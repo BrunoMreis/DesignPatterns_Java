@@ -8,7 +8,6 @@ public class Orcamento {
 	
 	
 	public Orcamento(double total) {
-		super();
 		this.total = total;	
 	}
 

@@ -1,5 +1,13 @@
 
-public abstract class TemplateMethod implements Imposto {
+public abstract class TemplateMethod extends Imposto {
+	
+	public TemplateMethod() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public TemplateMethod(Imposto outroImposto){
+		super(outroImposto);
+	}
 
 	@Override
 	public double calculaImposto(Orcamento orcamento) {

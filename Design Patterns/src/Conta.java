@@ -1,3 +1,4 @@
+import java.util.Calendar;
 
 public class Conta {
 	private double saldo;
@@ -8,6 +9,20 @@ public class Conta {
 	private String emailBanco;
 	private String agencia;
 	private String numeroConta;
+	
+	private Calendar dataAberturaDeConta;
+	
+	
+	
+	
+
+	public Calendar getDataAberturaDeConta() {
+		return dataAberturaDeConta;
+	}
+
+	public void setDataAberturaDeConta(Calendar dataAberturaDeConta) {
+		this.dataAberturaDeConta = dataAberturaDeConta;
+	}
 
 	public double getSaldo() {
 		return saldo;
