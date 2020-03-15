@@ -1,14 +1,16 @@
 import java.util.Calendar;
 
-public class Conta {
-	private double saldo;
-	private String nomeTitular;
-	private String nomeBanco;
-	private String telefoneBanco;
-	private String enderecoBanco;
-	private String emailBanco;
-	private String agencia;
-	private String numeroConta;
+public  class Conta {
+	protected double saldo;
+	protected String nomeTitular;
+	protected String nomeBanco;
+	protected String telefoneBanco;
+	protected String enderecoBanco;
+	protected String emailBanco;
+	protected String agencia;
+	protected String numeroConta;
+	
+	protected EstadoDaConta estadoAtual;
 	
 	private Calendar dataAberturaDeConta;
 	
@@ -29,7 +31,11 @@ public class Conta {
 	}
 
 	public void deposita (double valor) {
-		this.saldo =+ valor;
+		estadoAtual.deposita(this, valor);
+	}
+	
+	public void saca( double valor) {
+		estadoAtual.saca(this, valor);
 	}
 
 	public String getNomeTitular() {
