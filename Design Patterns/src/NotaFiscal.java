@@ -13,10 +13,22 @@ public class NotaFiscal {
 
 	private List<ItemDaNota> itens = new ArrayList<>();
 
-	public NotaFiscal(String nome, String cnpj, double imposto, Calendar dataDeEmissao, String observacoes,
-			List<ItemDaNota> itens) {
-		this.razaoSocial = nome;
+	public double getValorBruto() {
+		return valorBruto;
+	}
+
+	public void setValorBruto(double valorBruto) {
+		this.valorBruto = valorBruto;
+	}
+
+
+
+	public NotaFiscal(String razaoSocial, String cnpj, double valorBruto, double imposto, Calendar dataDeEmissao,
+			String observacoes, List<ItemDaNota> itens) {
+		super();
+		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
+		this.valorBruto = valorBruto;
 		this.imposto = imposto;
 		this.dataDeEmissao = dataDeEmissao;
 		this.observacoes = observacoes;

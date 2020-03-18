@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -11,7 +12,16 @@ public class NotaFiscalBuilder {
 	private Calendar dataDeEmissao;
 	private String observacoes;
 
-	private List<ItemDaNota> itens;
+	private List<ItemDaNota> itens = new ArrayList<>();
+	
+	private List<ExecutaAcoesNotaFiscal> acoes = new ArrayList<>();
+	
+	public NotaFiscalBuilder(List<ExecutaAcoesNotaFiscal> acoes ) {
+		this.acoes.addAll(acoes);
+	}
+	
+	//classe observável
+	
 
 	public NotaFiscalBuilder comNome(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
@@ -23,19 +33,14 @@ public class NotaFiscalBuilder {
 		return this;
 	}
 
-	public NotaFiscalBuilder comImposto(double imposto) {
-		this.imposto = imposto;
-		return this;
-	}
-
 	public NotaFiscalBuilder comDataDeEmissao(Calendar dataDeEmissao) {
 		this.dataDeEmissao = dataDeEmissao;
 		return this;
 	}
-	
+
 	public NotaFiscalBuilder comDataDeEmissao(int dia, int mes, int ano) {
 		dataDeEmissao = new GregorianCalendar();
-		dataDeEmissao.set(ano, mes, dia);		
+		dataDeEmissao.set(ano, mes, dia);
 		return this;
 	}
 
@@ -51,7 +56,17 @@ public class NotaFiscalBuilder {
 		return this;
 	}
 
+//	public NotaFiscalBuilder executaAcoesNotaFiscal(ExecutaAcoesNotaFiscal acao) {
+//		acoes.add(acao);
+//		return this;
+//	}
+
 	public NotaFiscal builder() {
-		return new NotaFiscal(razaoSocial, cnpj, imposto, dataDeEmissao, observacoes, itens);
+		NotaFiscal nf = new NotaFiscal(razaoSocial, cnpj, valorBruto, imposto, dataDeEmissao, observacoes, itens);
+		for (ExecutaAcoesNotaFiscal executaAcoesNotaFiscal : acoes) {
+			executaAcoesNotaFiscal.executa(nf);
+		}
+
+		return nf;
 	}
 }
