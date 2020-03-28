@@ -1,4 +1,5 @@
-
+package DesignPatternes1;
+//observador concreto 
 public class EnviadorDeEmail implements ExecutaAcoesNotaFiscal {
 
 	@Override

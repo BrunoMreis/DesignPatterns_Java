@@ -1,3 +1,4 @@
+package DesignPatternes1;
 
 public class DescontoAcimaDeQuinhentos implements Desconto {
 	

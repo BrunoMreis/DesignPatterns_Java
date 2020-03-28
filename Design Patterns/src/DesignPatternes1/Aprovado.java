@@ -1,3 +1,4 @@
+package DesignPatternes1;
 
 public class Aprovado implements EstadoOrcamento {
 	private static boolean descontatoUnico;

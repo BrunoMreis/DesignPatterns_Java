@@ -1,3 +1,4 @@
+package DesignPatternes1;
 
 //observador concreto 
 public class MultiplicadorDeNotaFiscal implements ExecutaAcoesNotaFiscal{

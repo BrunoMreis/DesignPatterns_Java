@@ -1,3 +1,4 @@
+package DesignPatternes1;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -16,7 +17,7 @@ public class NotaFiscalBuilder {
 	
 	private List<ExecutaAcoesNotaFiscal> acoes = new ArrayList<>();
 	
-	public NotaFiscalBuilder(List<ExecutaAcoesNotaFiscal> acoes ) {
+	public NotaFiscalBuilder( ) {
 		this.acoes.addAll(acoes);
 	}
 	
@@ -56,10 +57,10 @@ public class NotaFiscalBuilder {
 		return this;
 	}
 
-//	public NotaFiscalBuilder executaAcoesNotaFiscal(ExecutaAcoesNotaFiscal acao) {
-//		acoes.add(acao);
-//		return this;
-//	}
+	public NotaFiscalBuilder executaAcoesNotaFiscal(ExecutaAcoesNotaFiscal acao) {
+		acoes.add(acao);
+		return this;
+	}
 
 	public NotaFiscal builder() {
 		NotaFiscal nf = new NotaFiscal(razaoSocial, cnpj, valorBruto, imposto, dataDeEmissao, observacoes, itens);

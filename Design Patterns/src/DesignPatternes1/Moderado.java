@@ -1,3 +1,4 @@
+package DesignPatternes1;
 
 public class Moderado implements Investidor {
 

@@ -1,4 +1,7 @@
+package DesignPatternes1;
 
+
+//observador subject
 public interface ExecutaAcoesNotaFiscal {
 	
 	

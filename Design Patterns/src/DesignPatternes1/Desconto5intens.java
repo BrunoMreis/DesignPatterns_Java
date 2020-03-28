@@ -1,3 +1,4 @@
+package DesignPatternes1;
 
 public class Desconto5intens implements Desconto{
 	
