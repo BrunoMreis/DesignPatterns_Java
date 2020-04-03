@@ -18,6 +18,14 @@ public class NotasMusicais {
 		MUSICA.put("la", new La());
 		MUSICA.put("si", new Si());
 		
+		
+		MUSICA.put("do#", new DoSutenido());
+		MUSICA.put("re#", new ReSutenido());
+		MUSICA.put("mi#", new MiSutenido());
+		MUSICA.put("fa#", new FaSutenido());
+		MUSICA.put("sol#", new SolSutenido());
+		MUSICA.put("la#", new LaSutenido());
+		MUSICA.put("si#", new SiSutenido());
 	}
 	
 	public Nota pega(String nome) {
