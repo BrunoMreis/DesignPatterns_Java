@@ -7,9 +7,16 @@ public class Raiz extends Calculadora implements Expressao {
 	}
 
 	@Override
-	public Double avalia() {
+	public double avalia() {
 		
 		return Math.sqrt(expressaoUnica.avalia());
 	}
+
+	@Override
+	public void aceita(Visitor visitor) {
+		visitor.visitaRaiz(this);
+		
+	}
+
 
 }

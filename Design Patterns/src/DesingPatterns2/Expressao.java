@@ -1,5 +1,7 @@
 package DesingPatterns2;
 
 public interface Expressao {
-	Double avalia();
+	double avalia();
+	void aceita(Visitor visitor);
+	
 }

@@ -2,9 +2,9 @@ package DesingPatterns2;
 
 public class Numero implements Expressao {
 
-	private Double numero;
+	private double numero;
 
-	public Numero(Double numero) {
+	public Numero(double numero) {
 		super();
 		this.numero = numero;
 	}
@@ -15,10 +15,17 @@ public class Numero implements Expressao {
 	
 	
 	@Override
-	public Double avalia() {
+	public double avalia() {
 
 		
 		return this.numero;
 	}
+
+	@Override
+	public void aceita(Visitor visitor) {
+		visitor.visitaNumero(this);
+	}
+
+
 	
 }

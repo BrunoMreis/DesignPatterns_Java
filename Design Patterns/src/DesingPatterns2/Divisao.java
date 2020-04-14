@@ -7,11 +7,17 @@ public class Divisao extends Calculadora implements Expressao {
 	}
 
 	@Override
-	public Double avalia() {
+	public double avalia() {
 		Double esquerda = this.esquerda.avalia();
 		Double direita = this.direita.avalia();
 		
 		return esquerda / direita;
+	}
+
+	@Override
+	public void aceita(Visitor visitor) {
+		visitor.visitaDivisao(this);
+		
 	}
 	
 }

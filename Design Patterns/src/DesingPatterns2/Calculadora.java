@@ -17,4 +17,18 @@ public abstract class Calculadora implements Expressao {
 
 	}
 
+	public Expressao getEsquerda() {
+		return esquerda;
+	}
+
+	public Expressao getDireita() {
+		return direita;
+	}
+
+	public Expressao getExpressaoUnica() {
+		return expressaoUnica;
+	}
+
+	
+	
 }
